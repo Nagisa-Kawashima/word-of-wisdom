@@ -29,6 +29,7 @@
 
 ## 設計書
 - [簡易ワイヤーフレーム第一弾](https://www.figma.com/file/ekLzd1NiLaOsSZ929IJ2Xk/Portfolio?t=8s611O2LzlyUUZss-1)
+- [テーブル提議書 &&実装機能リスト](https://docs.google.com/spreadsheets/d/1pXixt_M5REF4go4DVeI9NFJd9-MPm2698JQHg8hti_0/edit?usp=sharing)
 
 ***
 
