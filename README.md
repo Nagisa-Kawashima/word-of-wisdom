@@ -31,6 +31,7 @@
 - [簡易ワイヤーフレーム第一弾](https://www.figma.com/file/ekLzd1NiLaOsSZ929IJ2Xk/Portfolio?t=8s611O2LzlyUUZss-1)
 - [テーブル提議書 &&実装機能リスト](https://docs.google.com/spreadsheets/d/1pXixt_M5REF4go4DVeI9NFJd9-MPm2698JQHg8hti_0/edit?usp=sharing)
 - [ER図](https://drive.google.com/file/d/1GXc9kyg_ufNV5CZcMbAgEuJYHOg9XCJ3/view?usp=sharing)
+- [アプリケーション詳細設計書](https://docs.google.com/spreadsheets/d/1K3YVMxReDjh8m90Wpum0JrMm8j2MxnbR3lsJC6TFndw/edit?usp=sharing)
 
 ***
 
