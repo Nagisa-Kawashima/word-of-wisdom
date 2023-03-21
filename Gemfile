@@ -69,3 +69,4 @@ gem 'kaminari','~> 1.2.1'
 gem 'bootstrap5-kaminari-views', '~> 0.0.1'
 gem 'carmen-rails', :git => 'https://github.com/Studiosity/carmen-rails.git', :branch => 'master'
 gem "active_storage_validations"
+gem 'devise-i18n-views'
