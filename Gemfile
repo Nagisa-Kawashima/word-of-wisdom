@@ -54,3 +54,18 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'devise'
+gem 'rails-i18n'
+gem 'enum_help'
+gem 'dotenv-rails'
+gem 'jquery-rails'
+gem 'rubocop', require: false
+gem 'rubocop-performance', require: false
+gem 'rubocop-rails', require: false
+gem 'rubocop-minitest', require: false
+gem 'rubocop-packaging', require: false
+gem 'rubocop-rspec'
+gem 'kaminari','~> 1.2.1'
+gem 'bootstrap5-kaminari-views', '~> 0.0.1'
+gem 'carmen-rails', :git => 'https://github.com/Studiosity/carmen-rails.git', :branch => 'master'
+gem "active_storage_validations"
