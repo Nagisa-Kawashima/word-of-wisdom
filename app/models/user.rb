@@ -6,14 +6,6 @@ class User < ApplicationRecord
 
 
 
-  # def get_profile_image(width, height)
-  # unless profile_image.attached?
-  #   file_path = Rails.root.join('app/assets/images/no_image.jpg')
-  #   profile_image.attach(io: File.open(file_path), filename: 'no_image.jpg', content_type: 'image/jpeg')
-  # end
-  # profile_image.variant(resize_to_limit: [width, height]).processed
-  # end
-
 
   has_one_attached :profile_image
   # def get_profile_image
@@ -25,9 +17,15 @@ class User < ApplicationRecord
   # end
 
 
-  validates :name, presence: true, length: { maximum: 20 }, uniqueness: { scope: :user }
+  validates :name, presence: true, length: { maximum: 20 }, uniqueness: true
   validates :email, { presence: true,  uniqueness: true}
-  validates :password, format: { with: /\A(?=.&#042;?[a-z])(?=.&#042;?\d)[a-z\d]+\z/i }
+  # validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[\d])\w{6,12}\z/ }
+  # VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i
+  # validates :password, format: { with: VALID_PASSWORD_REGEX }
+
+
+#半角英数字混合で6文字以上 ※大文字小文字の区別なし
+
   #パスワードに半角英数字を両方含める
   validates :is_deleted, inclusion: { in: [true, false] }
 

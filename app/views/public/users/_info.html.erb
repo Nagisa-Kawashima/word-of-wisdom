@@ -1,9 +1,9 @@
 <div class="col-md-5">
    <div>
       <% if user.profile_image.attached? %>
-        <%= image_tag user.profile_image, variant( resize: "100x100" )%>
+        <%= image_tag user.profile_image.variant( resize: "100x100", gravity: "center", crop: "100x100+0+0" )%>
       <% else %>
-         <%= image_tag 'no_image.jpg', size: '60x60' %>
+         <%= image_tag 'no_image.jpg', size: '100x100' %>
       <% end %>
    </div>
    <p>ニックネーム：<%= user.name %></p>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+
   # 顧客用
 
   devise_for :users,skip: [:passwords], controllers: {
@@ -25,6 +26,10 @@ Rails.application.routes.draw do
       get :likes
       end
 
+    end
+    resources :posts do
+      #いいね機能
+      # resource :likes, only: [:create, :destroy]
     end
 
 

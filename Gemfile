@@ -71,3 +71,5 @@ gem 'carmen-rails', :git => 'https://github.com/Studiosity/carmen-rails.git', :b
 gem "active_storage_validations"
 gem 'devise-i18n-views'
 gem 'image_processing', '~> 1.2'
+gem 'mini_magick'
+gem 'aws-sdk-s3'

@@ -1,5 +1,5 @@
 class Public::UsersController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :ensure_correct_user, only: [:update, :edit, :show]
   def show
     @user = User.find(params[:id])
@@ -24,6 +24,12 @@ class Public::UsersController < ApplicationController
   end
 
   def withdraw
+    @user = User.find(current_user.id)
+    @user.update(is_deleted: true)
+    # セッション情報を全て削除する
+    reset_session
+    flash[:notice] = "退会処理が完了しました。"
+    redirect_to root_path
   end
 
 
