@@ -1,0 +1,18 @@
+<div class="col-md-5">
+   <div>
+      <% if user.profile_image.attached? %>
+        <%= image_tag user.profile_image, variant( resize: "100x100" )%>
+      <% else %>
+         <%= image_tag 'no_image.jpg', size: '60x60' %>
+      <% end %>
+   </div>
+   <p>ニックネーム：<%= user.name %></p>
+   <p>メールアドレス：<%= user.email %></p>
+   <p>国籍：<%= user.counrty.name %></p>
+   <p>
+      <% if user.name != "guestuser" %>
+       <%= link_to '編集', edit_user_path, class: 'mt-2 btn btn-outline-primary w-100'%>
+      <% end %>
+      </p>
+
+</div>
