@@ -1,9 +1,9 @@
 ja:
   enums:
     post:
-      is_draft:
-        published: '投稿する'
-        draft: '下書きする'
+      post_status:
+        published: '公開する'
+        unpublished: '非公開にする'
   views:
     pagination:
       first: "&laquo; 最初"

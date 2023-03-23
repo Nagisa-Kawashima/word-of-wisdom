@@ -27,7 +27,7 @@ Rails.application.routes.draw do
       end
 
     end
-    resources :posts do
+    resources :posts, except: [:show] do
       #いいね機能
       # resource :likes, only: [:create, :destroy]
     end

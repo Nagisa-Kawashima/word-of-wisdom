@@ -24,7 +24,7 @@
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> 文字以内)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password" %>
+          <%= f.password_field :password, autocomplete: "new-password", pattern: '/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i' %>
         </div>
 
         <div class="field">

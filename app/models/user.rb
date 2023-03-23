@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
 
+  has_many :posts, dependent: :destroy
+
+
 
 
   has_one_attached :profile_image
@@ -17,8 +20,11 @@ class User < ApplicationRecord
   # end
 
 
+
   validates :name, presence: true, length: { maximum: 20 }, uniqueness: true
   validates :email, { presence: true,  uniqueness: true}
+  validates :profile_image, content_type: { in: %w[ image/jpg image/jpeg image/gif image/png]}, size: { less_than: 5.megabytes }
+
   # validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[\d])\w{6,12}\z/ }
   # VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i
   # validates :password, format: { with: VALID_PASSWORD_REGEX }

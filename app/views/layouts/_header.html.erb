@@ -18,8 +18,13 @@
               <i class="fas fa-home"></i>マイページ
             <% end %>
           </li>
+          <li>
+            <%= link_to new_post_path, class: 'nav-link text-light float' do %>
+              <i class="fas fa-pen"></i>名言作成
+            <% end %>
+          </li>
 
-        <!--ログインしていない場合-->
+        <!--ログインしていない場合-->s
         <% else %>
           <li>
             <%= link_to confirm_path, class: 'nav-link text-light float' do %>
